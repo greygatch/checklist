@@ -12,8 +12,9 @@ html(lang='en', ng-app='checklist')
   body
     include views/nav/nav
     .container-fluid
-      .row-xs-offset-4
-        div(ui-view)
+      .row
+        .col-xs-offset-5
+          div(ui-view)
     
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
