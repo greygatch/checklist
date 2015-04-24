@@ -14,6 +14,7 @@ nav.navbar.navbar-default(ng-controller='NavCtrl')
         li: a(ui-sref='about'): i.fa.fa-rocket &nbsp; About
         li: a(ui-sref='faq'): i.fa.fa-question &nbsp; FAQ
         li: a(ui-sref='contact'): i.fa.fa-user &nbsp; Contact
+        li: a(ui-sref='tasks'): i.fa.fa-check-circle-o &nbsp; Tasks
         li: button.btn-xs.btn-link.navbar-text.text-uppercase(ng-click='logout()'): i.fa.fa-sign-out &nbsp; Logout
       ul.nav.navbar-nav.navbar-right(ng-hide='activeUser')
         li.navbar-text {{activeUser.password.email}}

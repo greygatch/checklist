@@ -1,0 +1,16 @@
+h3 TASKS
+  .row
+    .col-xs-4
+      form
+        .form-group
+          label(for='assignment') Assignment
+          input.text-field.form-control(name='assignment' type='text' ng-model='task.title')
+          label Date
+          input.text-field.form-control(type='date' ng-model='task.dueDate')
+          label Priority
+          select.form-control(ng-model='task.priority')
+            option Low
+            option Med
+            Option High
+        
+        button.btn.btn-success(ng-click='addTask(task)') Add Task
