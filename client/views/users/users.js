@@ -4,6 +4,7 @@ angular.module('checklist')
 .controller('UsersCtrl', ['$scope', 'User', '$state', '$rootScope', function($scope, User, $state, $rootScope){
   $scope.name = $state.current.name;
 
+  // if state name is register, else...
   $scope.submit = function(user){
     if($scope.name === 'register'){
       User.register(user)
