@@ -2,7 +2,6 @@
 
 angular.module('checklist')
 .controller('UsersCtrl', ['$scope', 'User', '$state', '$rootScope', function($scope, User, $state, $rootScope){
-
   $scope.name = $state.current.name;
 
   $scope.submit = function(user){
@@ -10,17 +9,16 @@ angular.module('checklist')
       User.register(user)
       .then(function(){
         $state.go('login');
-
       })
       .catch(function(err){
         console.error(err);
       });
-    }else{
+    }
+    else{
       User.login(user)
       .catch(function(err){
         console.error(err);
       });
     }
-
   };
 }]);
